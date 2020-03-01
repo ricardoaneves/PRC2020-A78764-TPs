@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .w3-container
+    .w3-card-4
+      h1= obra[0].titulo
+      h3= obra[0].compositor
+      table.w3-table-all.w3-card-4
+        tr
+          th Titulo
+          th Tipo
+          th Voz
+        each p in obra
+          tr
+            td= p.p
+            td= p.tipo
+            td= p.voz

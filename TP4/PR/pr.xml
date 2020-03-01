@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020-A78764-TP4</keyname>
+        <title>Criação de uma servidor para arquivo de música digital baseado em SPARQL</title>
+        <subtitle></subtitle>
+        <bdate>24-02-2020</bdate>
+        <edate>01-03-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A78764</identifier>
+            <name>Ricardo André Araújo Neves</name>
+            <email>a78764@alunos.uminho.pt</email>
+            <photo path="photo.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>O quarto trabalho baseou-se na criação de um servidor em NodeJS para apresentar as obras e partituras</p>
+        <p>presentes na base de dados do GraphDB.</p>
+        <p>Na página inicial, podemos ver todas as obras presentes na base de dados e o número de partituras associadas. Também há</p>
+        <p>a possibilidade de abrir uma determinada obra, onde são apresentadas as partituras e suas informações.</p>
+        <p></p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP4/PR/pr.xml">XML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP4/PR/pr.html">HTML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/tree/master/TP4/server">Servidor NodeJS</deliverable>
+    </deliverables>
+</pr>
