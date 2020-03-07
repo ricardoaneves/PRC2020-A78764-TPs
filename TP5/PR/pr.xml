@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020-A78764-TP5</keyname>
+        <title>Desenvolvimento de uma query SPARQL sob a topologia DBPedia</title>
+        <subtitle></subtitle>
+        <bdate>02-03-2020</bdate>
+        <edate>07-03-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A78764</identifier>
+            <name>Ricardo André Araújo Neves</name>
+            <email>a78764@alunos.uminho.pt</email>
+            <photo path="photo.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Este trabalho consistiu no desenvolvimento de uma query SPARQL, fazendo uso da interface do website https://dbpedia.org/sparql.</p>
+        <p>Esta query acede a todos os registos de nadadores (Swimmers) presentes na topologia, apresentando o seu nome, género,</p>
+        <p>data e local de nascimento, data de morte e abstract, sendo que alguns destes parâmetros são opcionais e podem não estar contidos</p>
+        <p>na topologia fornecida.</p>
+        <p>Os resultados obtidos encontram-se em formato .JSON.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP5/PR/pr.xml">XML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP5/PR/pr.html">HTML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP5/query.txt">Query SPARQL</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP5/resultado.json">Resultados obtidos em .JSON</deliverable>
+    </deliverables>
+</pr>

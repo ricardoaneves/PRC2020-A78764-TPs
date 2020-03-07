@@ -1,0 +1,11 @@
+select distinct ?name ?gender ?birthDate ?birthPlace ?deathDate ?abstract where {
+
+?s a dbo:Swimmer.
+?s foaf:name ?name.
+?s foaf:gender ?gender.
+?s dbo:birthDate ?birthDate.
+optional{ ?s dbo:birthPlace ?birthPlace. }
+optional{ ?s dbo:deathDate ?deathDate. }
+optional{ ?s dbo:abstract ?abstract. FILTER (lang(?abstract) = 'en'). }
+
+} LIMIT 200
