@@ -1,0 +1,240 @@
+@prefix : <http://ricardoneves/ontologies/2020/2/lojas#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ricardoneves/ontologies/2020/2/lojas> .
+
+<http://ricardoneves/ontologies/2020/2/lojas> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ricardoneves/ontologies/2020/2/lojas#compra
+:compra rdf:type owl:ObjectProperty ;
+        owl:inverseOf :éCompradoPor ;
+        rdfs:domain :Cliente ;
+        rdfs:range :Produto .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#vende
+:vende rdf:type owl:ObjectProperty ;
+       owl:inverseOf :éVendidoPor ;
+       rdfs:domain :Loja ;
+       rdfs:range :Produto .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#éCompradoPor
+:éCompradoPor rdf:type owl:ObjectProperty .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#éVendidoPor
+:éVendidoPor rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ricardoneves/ontologies/2020/2/lojas#codigo
+:codigo rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Produto .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Cliente ,
+                   :Loja .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Cliente ,
+                  :Loja .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ricardoneves/ontologies/2020/2/lojas#Cliente
+:Cliente rdf:type owl:Class ;
+         rdfs:subClassOf :CompraVenda ;
+         owl:disjointWith :Produto .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#CompraVenda
+:CompraVenda rdf:type owl:Class .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#Loja
+:Loja rdf:type owl:Class ;
+      rdfs:subClassOf :CompraVenda .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#LojaGrande
+:LojaGrande rdf:type owl:Class ;
+            rdfs:subClassOf :Loja .
+
+
+###  http://ricardoneves/ontologies/2020/2/lojas#Produto
+:Produto rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+### Lojas
+
+###  http://ricardoneves/ontologies/2020/2/lojas#continente
+:Continente rdf:type owl:NamedIndividual ,
+                    :LojaGrande ;
+           :vende :B2 ;
+           :vende :D4 ;
+           :vende :I9 ;
+           :email "continente@sonae.com"^^xsd:string ;
+           :nome "Continente"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#PingoDoce
+:PingoDoce rdf:type owl:NamedIndividual ,
+                    :LojaGrande ;
+           :vende :A1 ;
+           :vende :B2 ;
+           :vende :E5 ;
+           :vende :G7 ;
+           :email "geral@pingodoce.com"^^xsd:string ;
+           :nome "Pingo Doce"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#LIDL
+:LIDL rdf:type owl:NamedIndividual ,
+                    :Loja ;
+           :vende :C3 ;
+           :vende :I9 ;
+           :email "geral@lidl.com"^^xsd:string ;
+           :nome "LIDL"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#TalhoDoBairro
+:TalhoDoBairro rdf:type owl:NamedIndividual ,
+                    :Loja ;
+           :vende :E5 ;
+           :vende :F6 ;
+           :vende :H8 ;
+           :vende :J10 ;
+           :email "talhodobairo@mail.com"^^xsd:string ;
+           :nome "Talho do Bairro"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#MerceariaDoJoão
+:MerceariaDoJoão rdf:type owl:NamedIndividual ,
+                    :Loja ;
+           :vende :A1 ;
+           :vende :D4 ;
+           :email "mercariadojoao@mail.com"^^xsd:string ;
+           :nome "Mercearia do João"^^xsd:string .
+
+### Clientes
+
+###  http://ricardoneves/ontologies/2020/2/lojas#Ricardo
+:Ricardo rdf:type owl:NamedIndividual ,
+               :Cliente ;
+      :compra :A1 ;
+      :compra :D4 ;
+      :compra :G7 ;
+      :email "ricardo@mail.com"^^xsd:string ;
+      :nome "Ricardo"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#Manuel
+:Manuel rdf:type owl:NamedIndividual ,
+               :Cliente ;
+      :compra :B2 ;
+      :compra :C3 ;
+      :compra :D4 ;
+      :compra :E5 ;
+      :compra :G7 ;
+      :compra :J10 ;
+      :email "manuel@mail.com"^^xsd:string ;
+      :nome "Manuel"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#David
+:David rdf:type owl:NamedIndividual ,
+               :Cliente ;
+      :compra :D4 ;
+      :compra :I9 ;
+      :compra :J10 ;
+      :email "david@mail.com"^^xsd:string ;
+      :nome "David"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#Eduardo
+:Eduardo rdf:type owl:NamedIndividual ,
+               :Cliente ;
+      :compra :C3 ;
+      :compra :F6 ;
+      :compra :H8 ;
+      :email "eduardo@mail.com"^^xsd:string ;
+      :nome "Eduardo David"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#Carlos
+:Carlos rdf:type owl:NamedIndividual ,
+               :Cliente ;
+      :compra :B2 ;
+      :compra :C3 ;
+      :compra :H8 ;
+      :email "carlos@mail.com"^^xsd:string ;
+      :nome "Carlos"^^xsd:string .
+
+
+### Produtos
+
+###  http://ricardoneves/ontologies/2020/2/lojas#QA1
+:A1 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "A1"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#B2
+:B2 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "B2"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#C3
+:C3 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "C3"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#D4
+:D4 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "D4"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#E5
+:E5 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "E5"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#F6
+:F6 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "F6"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#G7
+:G7 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "G7"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#H8
+:H8 rdf:type owl:NamedIndividual ,
+             :H8 ;
+    :codigo "p00008"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#I9
+:I9 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "I9"^^xsd:string .
+
+###  http://ricardoneves/ontologies/2020/2/lojas#J10
+:J10 rdf:type owl:NamedIndividual ,
+             :Produto ;
+    :codigo "J10"^^xsd:string .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

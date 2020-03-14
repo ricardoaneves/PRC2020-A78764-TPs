@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020-A78764-TP6</keyname>
+        <title>Realização do teste de PRC de 2018</title>
+        <subtitle></subtitle>
+        <bdate>09-03-2020</bdate>
+        <edate>15-03-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A78764</identifier>
+            <name>Ricardo André Araújo Neves</name>
+            <email>a78764@alunos.uminho.pt</email>
+            <photo path="photo.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Foi proposta a realização do teste da disciplina, realizado pelos alunos em 2018.</p>
+        <p>Este teste consiste em 4 questões acerca de ontologias e aplicação de queries SPARQL.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP6/PR/pr.xml">XML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP6/PR/pr.html">HTML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/tree/master/TP6/Exercício1">Exercício 1</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/tree/master/TP6/Exercício1">Exercício 2</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/tree/master/TP6/Exercício1">Exercício 3</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/tree/master/TP6/Exercício1">Exercício 4</deliverable>
+    </deliverables>
+</pr>

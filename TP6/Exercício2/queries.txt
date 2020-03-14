@@ -1,0 +1,30 @@
+1. Que lojas vendem o produto A?
+
+PREFIX : <http://ricardoneves/ontologies/2020/2/lojas#>
+select ?loja where {
+    :A1 a :Produto .
+    ?l a :Loja .
+    ?l :vende :A1 .
+    ?l :nome ?loja .
+}
+
+2. Que produtos são comprados pelo cliente X?
+
+PREFIX : <http://ricardoneves/ontologies/2020/2/lojas#>
+select ?produto where {
+    ?c a :Cliente.
+    ?c :nome "Ricardo".
+    ?c :compra ?p.
+    ?p :codigo ?produto.
+}
+
+3. Quem são os potenciais clientes da loja Y?
+
+PREFIX : <http://ricardoneves/ontologies/2020/2/lojas#>
+select ?cliente where {
+    :LIDL a :Loja .
+    :LIDL :vende ?p .
+    ?c :compra ?p .
+    ?c a :Cliente .
+    ?c :nome ?cliente .
+}
