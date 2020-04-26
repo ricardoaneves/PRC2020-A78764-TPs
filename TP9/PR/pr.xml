@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020-A78764-TP9</keyname>
+        <title>Desenvolvimento de uma interface de cinema</title>
+        <subtitle></subtitle>
+        <bdate>20-04-2020</bdate>
+        <edate>26-04-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A78764</identifier>
+            <name>Ricardo André Araújo Neves</name>
+            <email>a78764@alunos.uminho.pt</email>
+            <photo path="photo.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Neste trabalho de casa, foi proposto o melhoramento da API e interface, em Vue, de uma biblioteca de</p>
+        <p>cinema criada na aula prática da semana. Deste modo, é neste momento possível aceder à lista de filmes e atores</p>
+        <p>presentes na base de dados, bem como entrar na informação de cada um desses elementos.</p>
+        <p>Para isto, é necessário clicar no ícone presente ao lado de cada filme/ator, onde o utilizador</p>
+        <p>será reencaminhado para a página individual desse elemento.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP9/PR/pr.xml">XML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/blob/master/TP9/PR/pr.html">HTML do Manifesto</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/tree/master/TP9/cinemateca/API">API de cinema</deliverable>
+        <deliverable path="https://github.com/ricardoaneves/PRC2020-A78764-TPs/tree/master/TP9/cinemateca/interface">Interface do sistema em Vue</deliverable>
+    </deliverables>
+</pr>
