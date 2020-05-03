@@ -1,0 +1,51 @@
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+
+select ?tio ?pai ?filho where {
+
+    ?tio :sex "M".
+    ?tio :hasSibling ?pai.
+    ?pai :hasChild ?filho.
+
+}
+
+select ?primo ?tio ?pai ?filho where {
+
+    ?tio :hasChild ?primo.
+    ?tio :hasSibling ?pai.
+    ?pai :hasChild ?filho.
+
+}
+
+select ?pessoa ?ancestral where {
+
+    ?pessoa (:hasParent)+ ?ancestral.
+
+}
+
+select ?pessoa ?ancestral where {
+
+    ?pessoa (:hasChild)+ ?ancestral.
+
+}
+
+select ?a ?b ?cunhado  where {
+
+    ?a :sex ?asex.
+    ?a :hasChild ?child.
+    ?b :hasChild ?child.
+    bind (if(?asex = 'M', 'F', 'M') as ?bsex)
+    ?b :sex ?bsex.
+ 	?b :hasSibling ?cunhado.
+
+}
+
+select ?a ?b ?sogro where {
+
+    ?a :sex ?asex.
+    ?a :hasChild ?child.
+    ?b :hasChild ?child.
+    bind (if(?asex = 'M', 'F','M') as ?bsex)
+    ?b :sex ?bsex.
+ 	?b :hasParent ?sogro.
+
+}
